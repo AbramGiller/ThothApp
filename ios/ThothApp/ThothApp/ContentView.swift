@@ -1,14 +1,39 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        LibraryView(books: sampleBooks())
-    }
+    @State private var documentURL: URL?
+    @State private var book: Book? // Ensure you have a Book model defined
+    @State private var showingDocumentPicker = false
 
-    private func sampleBooks() -> [Book] {
-        [
-            Book(title: "Book One", content: "This is the content of book one..."),
-            Book(title: "Book Two", content: "This is the content of book two...")
-        ]
+    var body: some View {
+        NavigationView {
+            VStack {
+                Button("Load ePub") {
+                    showingDocumentPicker = true
+                }
+                .sheet(isPresented: $showingDocumentPicker) {
+                    // Assuming DocumentPicker is a SwiftUI view that you've set up to handle file selection
+                    DocumentPicker(document: $documentURL)
+                }
+
+                if let documentURL = documentURL {
+                    Button("Open Book") {
+                        // Attempt to parse the book and print a debug message
+                        book = EPubParser.parseEPub(at: documentURL)
+                        print("Book loaded: \(book?.title ?? "Unknown")")
+                    }
+                }
+
+                if let book = book {
+                    ScrollView {
+                        Text(book.title)
+                            .font(.title)
+                        Text(book.content)
+                            .padding()
+                    }
+                }
+            }
+            .navigationTitle("ThothApp")
+        }
     }
 }

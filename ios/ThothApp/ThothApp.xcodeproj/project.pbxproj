@@ -26,6 +26,17 @@
 		2E60BDCE2BE80D5B0091F506 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60BDCD2BE80D5B0091F506 /* ReaderView.swift */; };
 		2E60BDCF2BE80D5B0091F506 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60BDCD2BE80D5B0091F506 /* ReaderView.swift */; };
 		2E60BDD02BE80D5B0091F506 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60BDCD2BE80D5B0091F506 /* ReaderView.swift */; };
+		2E60BDD32BE80F7B0091F506 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 2E60BDD22BE80F7B0091F506 /* ZIPFoundation */; };
+		2E60BDD62BE80F910091F506 /* AEXML in Frameworks */ = {isa = PBXBuildFile; productRef = 2E60BDD52BE80F910091F506 /* AEXML */; };
+		2E60BDDC2BE8109C0091F506 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60BDDB2BE8109C0091F506 /* DocumentPicker.swift */; };
+		2E60BDDD2BE8109C0091F506 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60BDDB2BE8109C0091F506 /* DocumentPicker.swift */; };
+		2E60BDDE2BE8109C0091F506 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60BDDB2BE8109C0091F506 /* DocumentPicker.swift */; };
+		2E60BDE02BE812D00091F506 /* EPubParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60BDDF2BE812D00091F506 /* EPubParser.swift */; };
+		2E60BDE12BE812D00091F506 /* EPubParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60BDDF2BE812D00091F506 /* EPubParser.swift */; };
+		2E60BDE22BE812D00091F506 /* EPubParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60BDDF2BE812D00091F506 /* EPubParser.swift */; };
+		2E60BDE42BE817770091F506 /* FileManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60BDE32BE817770091F506 /* FileManagerExtensions.swift */; };
+		2E60BDE52BE817770091F506 /* FileManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60BDE32BE817770091F506 /* FileManagerExtensions.swift */; };
+		2E60BDE62BE817770091F506 /* FileManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60BDE32BE817770091F506 /* FileManagerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +72,9 @@
 		2E60BDC52BE80CEA0091F506 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		2E60BDC92BE80D110091F506 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		2E60BDCD2BE80D5B0091F506 /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
+		2E60BDDB2BE8109C0091F506 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
+		2E60BDDF2BE812D00091F506 /* EPubParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPubParser.swift; sourceTree = "<group>"; };
+		2E60BDE32BE817770091F506 /* FileManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E60BDD62BE80F910091F506 /* AEXML in Frameworks */,
+				2E60BDD32BE80F7B0091F506 /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +127,8 @@
 		2E1E5FBD2BE7F17F00196A17 /* ThothApp */ = {
 			isa = PBXGroup;
 			children = (
+				2E60BDDF2BE812D00091F506 /* EPubParser.swift */,
+				2E60BDDB2BE8109C0091F506 /* DocumentPicker.swift */,
 				2E60BDCD2BE80D5B0091F506 /* ReaderView.swift */,
 				2E60BDC92BE80D110091F506 /* Book.swift */,
 				2E60BDC52BE80CEA0091F506 /* LibraryView.swift */,
@@ -120,6 +138,7 @@
 				2E1E5FC42BE7F18200196A17 /* ThothApp.entitlements */,
 				2E1E5FC52BE7F18200196A17 /* Preview Content */,
 				2E1E5FE92BE8032700196A17 /* ViewController.swift */,
+				2E60BDE32BE817770091F506 /* FileManagerExtensions.swift */,
 			);
 			path = ThothApp;
 			sourceTree = "<group>";
@@ -165,6 +184,10 @@
 			dependencies = (
 			);
 			name = ThothApp;
+			packageProductDependencies = (
+				2E60BDD22BE80F7B0091F506 /* ZIPFoundation */,
+				2E60BDD52BE80F910091F506 /* AEXML */,
+			);
 			productName = ThothApp;
 			productReference = 2E1E5FBB2BE7F17F00196A17 /* ThothApp.app */;
 			productType = "com.apple.product-type.application";
@@ -237,6 +260,10 @@
 				Base,
 			);
 			mainGroup = 2E1E5FB22BE7F17F00196A17;
+			packageReferences = (
+				2E60BDD12BE80F7B0091F506 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+				2E60BDD42BE80F910091F506 /* XCRemoteSwiftPackageReference "AEXML" */,
+			);
 			productRefGroup = 2E1E5FBC2BE7F17F00196A17 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -281,9 +308,12 @@
 			files = (
 				2E60BDC62BE80CEA0091F506 /* LibraryView.swift in Sources */,
 				2E60BDCE2BE80D5B0091F506 /* ReaderView.swift in Sources */,
+				2E60BDE42BE817770091F506 /* FileManagerExtensions.swift in Sources */,
 				2E1E5FEA2BE8032700196A17 /* ViewController.swift in Sources */,
 				2E1E5FC12BE7F17F00196A17 /* ContentView.swift in Sources */,
+				2E60BDE02BE812D00091F506 /* EPubParser.swift in Sources */,
 				2E60BDCA2BE80D110091F506 /* Book.swift in Sources */,
+				2E60BDDC2BE8109C0091F506 /* DocumentPicker.swift in Sources */,
 				2E1E5FBF2BE7F17F00196A17 /* ThothAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,9 +323,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E60BDCB2BE80D110091F506 /* Book.swift in Sources */,
+				2E60BDE52BE817770091F506 /* FileManagerExtensions.swift in Sources */,
 				2E60BDCF2BE80D5B0091F506 /* ReaderView.swift in Sources */,
 				2E1E5FEB2BE803C800196A17 /* ViewController.swift in Sources */,
 				2E60BDC72BE80CEA0091F506 /* LibraryView.swift in Sources */,
+				2E60BDE12BE812D00091F506 /* EPubParser.swift in Sources */,
+				2E60BDDD2BE8109C0091F506 /* DocumentPicker.swift in Sources */,
 				2E1E5FD12BE7F18200196A17 /* ThothAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,9 +339,12 @@
 			files = (
 				2E60BDC82BE80CEA0091F506 /* LibraryView.swift in Sources */,
 				2E60BDD02BE80D5B0091F506 /* ReaderView.swift in Sources */,
+				2E60BDE62BE817770091F506 /* FileManagerExtensions.swift in Sources */,
 				2E1E5FEC2BE803D000196A17 /* ViewController.swift in Sources */,
 				2E1E5FDD2BE7F18200196A17 /* ThothAppUITestsLaunchTests.swift in Sources */,
+				2E60BDE22BE812D00091F506 /* EPubParser.swift in Sources */,
 				2E60BDCC2BE80D110091F506 /* Book.swift in Sources */,
+				2E60BDDE2BE8109C0091F506 /* DocumentPicker.swift in Sources */,
 				2E1E5FDB2BE7F18200196A17 /* ThothAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -642,6 +678,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E60BDD12BE80F7B0091F506 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.19;
+			};
+		};
+		2E60BDD42BE80F910091F506 /* XCRemoteSwiftPackageReference "AEXML" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tadija/AEXML.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E60BDD22BE80F7B0091F506 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E60BDD12BE80F7B0091F506 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+		2E60BDD52BE80F910091F506 /* AEXML */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E60BDD42BE80F910091F506 /* XCRemoteSwiftPackageReference "AEXML" */;
+			productName = AEXML;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E1E5FB32BE7F17F00196A17 /* Project object */;
 }
